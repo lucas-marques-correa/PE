@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+int main() {
+	
+	int v[3], m[3][3], soma, i, j;
+
+	for (i = 0; i<3; i++){
+		for (j = 0; j<3; j++){
+			scanf("%i", &m[i][j]);
+		}
+	}
+
+	for (j = 0; j<3; j++){
+		soma = 0;
+		for (i = 0; i<3; i++){
+			soma = soma + m[i][j];
+		}
+		v[j] = soma;
+	}
+
+	for (i = 0; i<3; i++){
+		printf("%d ", v[i]);
+	}
+
+}

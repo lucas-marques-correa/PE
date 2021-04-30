@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+int printnum(int n, int y){
+
+    printf("%d ", y);
+    if (n>y){
+        return printnum(n, y+1);
+    }
+} 
+void main (){ 
+    int n, y = 0;  
+    scanf("%d", &n); 
+    printnum(n, y);
+} 

@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+
+struct cadastro{
+	char nome[50];
+	int idade;
+};
+
+int main(){
+	struct cadastro c;
+	scanf("%s %i", &c.nome[50], &c.idade);
+	printf("Nome: %s\nIdade: %i", c.nome, c.idade);
+}

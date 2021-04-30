@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+struct coordenada{
+	float x1, x2, y1, y2;
+};
+
+int main(){
+	struct coordenada c;
+	float dist;
+	scanf("%f%f%f%f", &c.x1, &c.y1, &c.x2, &c.y2);
+	dist = sqrt(pow(c.x1 - c.x2, 2) + pow(c.y1 - c.y2, 2));
+	printf("%.1f", dist);
+}

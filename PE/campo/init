@@ -1,0 +1,14 @@
+int l, c;
+
+// funcao para inicializar a matriz  do  campo minado
+
+void Board_Init(){
+	for (l = 0; l < lenght; l++){
+		for(c = 0; c < lenght; c++){
+			board[l][c].bomb = 0
+			board[l][c].open = 0
+			board[l][c].flag = 0
+			board[l][c].adjacentBombs = 0
+		}
+	}
+}

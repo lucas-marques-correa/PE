@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+struct coordenada{
+	int mat;
+	float p1, p2, p3;
+	char nome[50];
+};
+
+int main(){
+	struct coordenada c[4];
+	float soma[4];
+	int i = 0, aux1 = 0, aux2;
+	while (i<4){
+
+		scanf("%i", &c[i].mat);
+		scanf("%s", c[i].nome);
+		scanf("%f%f%f", &c[i].p1, &c[i].p2, &c[i].p3);
+		soma[i] = c[i].p1 + c[i].p2 + c[i].p3;
+
+		if (soma[i] > aux1){
+		    aux1 = soma[i];
+			aux2 = i;			
+		}
+		i = i + 1;
+	}	
+
+	printf("%i\n", c[aux2].mat);
+	printf("%s\n", c[aux2].nome);
+	printf("%.1f\n%.1f\n%.1f", c[aux2].p1, c[aux2].p2, c[aux2].p3);
+}

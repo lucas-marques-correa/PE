@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+
+	int v[6], i, j, k, l, aux[6], c, d = 0;
+
+	/* vetor v[6] */
+
+	for (i = 0; i < 6; i++){
+		scanf("%d", &v[i]);
+	}
+
+	/* encotrar repetidos */
+
+	for (i = 0; i < 5; i++){
+		for (j = i+1; j < 6; j++){
+			if (v[i] == v[j]){
+				for (k = 0; k < 5; k++){
+					if (v[i] == aux[k]){
+						c = 1;
+					}
+				}
+				if (c == 0){
+					aux[d] = v[i];
+					d = d+1;
+				}	
+			}
+		}
+	}
+
+	/* validacao e print final */
+	
+	if (d == 0) printf("Nao existem valores iguais!");
+
+	else {
+
+		for (i = 0; i < d; i++){
+			printf("%d\n", aux[i]);
+		}
+	}
+}

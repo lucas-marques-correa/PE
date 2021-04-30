@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+	char palavra[8];
+	int i, len = 0;
+	/* formando a string */
+
+	scanf("%s", palavra);
+	
+	for (i = 0; palavra[i] != '\0'; i++){
+		printf("%c\n", palavra[i]);	
+		len = len + 1;
+			
+	}
+	printf("%i", len);
+}

@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+int main() {
+    int l, c;
+
+	scanf("%d%d", &l, &c);
+	
+	int m[l][c], i, j, i2, i3, j2;
+	
+	for (i = 0; i<l; i++){
+		i2 = pow(i,2);
+		i3 = pow(i,3);
+		for (j = 0; j<c; j++){
+			j2 = pow(j,2);
+			if (i < j){
+				m[i][j] = (2*i)+(7*j) - 2;
+				printf("%d ", m[i][j]);
+
+			}
+			if (i == j){
+				m[i][j] = (3*i2) - 1;
+				printf("%d ", m[i][j]);
+				
+			}
+			if (i > j){
+				m[i][j] = (4*i3)+(5*j2) + 1;
+				printf("%d ", m[i][j]);
+			}
+		}
+		printf("\n");
+	}
+
+
+}

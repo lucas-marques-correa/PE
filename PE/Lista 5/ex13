@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+int lista(int *v, int y){
+	int soma = 0;
+	if (y<4) {
+		soma = soma + v[y] + lista(v, y+1);
+	}
+    return soma;
+} 
+int main (){ 
+    int v[4], y = 0, i;  
+	for (i = 0; i<4; i++){
+		scanf("%d", &v[i]);
+	}
+
+
+	 printf("%d", lista(v, y));
+
+}

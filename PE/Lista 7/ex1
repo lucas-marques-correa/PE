@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+	int x = 3, *px = &x;
+	float y = 3.4, *py = &y;
+	char z = 'A', *pz = &z;
+
+
+	printf("Antes:\nx = %d\ny = %f\nz = %c\n", *px, *py, *pz);
+    scanf("%i %f %c", &(*px), &(*py), &(*pz));
+	printf("Depois:\nx = %d\ny = %f\nz = %c", *px, *py, *pz);
+
+}

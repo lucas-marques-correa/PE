@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int m[3][3], i, j, l, c, l1, c1, maior = 0, menor = 10000;
+	for (i = 0; i<3; i++){
+		for (j = 0; j<3; j++){
+			scanf("%i", &m[i][j]);
+			if (maior < m[i][j]){
+				maior = m[i][j];
+				l = i;
+				c = j;
+			}
+			if (menor > m[i][j]){
+				menor = m[i][j];
+				l1 = i;
+				c1 = j;
+			}
+		}
+	}
+
+	printf("Maior: %i\nPosicao (maior): %i linha e %i coluna\nMenor: %i\nPosicao (menor): %i linha e %i coluna", maior, l, c, menor, l1, c1);
+
+}

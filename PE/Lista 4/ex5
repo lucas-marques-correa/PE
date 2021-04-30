@@ -1,0 +1,98 @@
+#include <stdio.h>
+
+int main() {
+    int v[10], resto, i, j;
+    
+    /* vetor de tamanho 10 */
+  
+    for (i = 0; i <= 9; i++){
+        scanf("%d", &v[i]);
+    }
+
+    /* vetores par e impar */
+
+    int pares[10], impares[10], p = 0, im = 0;
+  
+    for (i = 0; i <= 9; i++){
+        if (v[i] % 2 == 0){
+            pares[p] = v[i];
+            p++;
+        }
+
+        else{
+            impares[im] = v[i];
+            im++;
+        }
+    }
+
+    /* removendo elementos repetidos */
+
+    int paresf[p], imparesf[im], c, d = 0, e = 0;
+/*pares*/
+    for (i = 0; i < p; i++){
+        c = 0;
+        for(j = 0; j < p; j++){
+          if (pares[i] == pares[j]){
+			  if (i > j){
+				  c = 1;				  
+			  }  	
+          }
+        }
+        if (c == 0) {
+            paresf[d] = pares[i];
+            d++;
+        }
+    }
+    
+/*impares*/
+    for (i = 0; i < im; i++){
+        c = 0;
+        for(j = 0 ; j < im; j++){
+          if (impares[i] == impares[j]){
+			  if (i > j){
+				 c = 1;
+			  }
+		  }
+        }
+        if (c == 0) {
+            imparesf[e] = impares[i];
+            e++;
+        }
+    }
+        /* imprimindo pares */
+        
+    printf("Numeros pares:\n");
+    for (i = 0; i < d; i++){
+      printf("%d\n", paresf[i]);
+    }
+        /* imprimindo impares */
+        
+    printf("Numeros impares:\n");
+    for (i = 0; i < e; i++){
+      printf("%d\n", imparesf[i]);
+    }
+        /* achando maior e menor */
+        
+        int maior = 0, menor = 1000000000, aux1, aux2 ;
+        
+/* maior */
+        for (i = 0; i < 9; i++){
+            if (v[i] > v[i+1]){
+                aux1 = v[i];
+            }
+            else aux1 = v[i+1];
+            if (aux1 > maior) maior = aux1;
+        }
+        
+    printf("Maior: %d", maior);
+
+/* menor */
+		for (i = 0; i < 9; i++){
+			if (v[i] < v[i+1]){
+				aux2 = v[i];
+			}
+			else aux2 = v[i+1];
+			if (aux2 < menor) menor = aux2;
+		}
+	printf("\nMenor: %d", menor);
+}

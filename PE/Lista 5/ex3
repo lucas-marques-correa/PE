@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int m[4][4], i, j, c = 0, c1 = 0;
+	for (i = 0; i<4; i++){
+		for (j = 0; j<4; j++){
+			scanf("%i", &m[i][j]);
+			if (0 > m[i][j]){
+				c = c + 1;
+			
+			}
+			if (10 < m[i][j]){
+				c1 = c1 + 1;
+				
+			}
+		}
+	}
+
+	printf("Qtd. > 10: %d\nQtd. < 0: %d", c, c1);
+
+}

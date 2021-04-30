@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+
+	char palavra[8], i = 0;
+	int len = 0;
+	
+	/* formando a string */
+	while (i==0){
+
+		scanf("%s", palavra);
+		len = strlen(palavra);
+        if (len > 5){
+	    printf("Digite novamente a string com ate 5 caracteres:\n");
+	    i = 0;
+		}
+		else i = 1;
+	}
+	/* imprimindo palavra ao contrário */
+	
+	for (i = len-1; ; i--){
+		printf("%c ", palavra[i]);
+		if (i == 0){
+			break;
+		}		
+	}
+
+}

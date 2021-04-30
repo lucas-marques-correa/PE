@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+struct coordenada{
+	int age;
+	float alt;
+	char nome[50];
+};
+
+int main(){
+	struct coordenada c[4];
+	int i = 0, aux1 = 0, aux2, aux4;
+	float aux3 = 0;
+	while (i<4){
+
+		scanf("%s", c[i].nome);
+		scanf("%i", &c[i].age);
+		scanf("%f", &c[i].alt);
+
+		if (c[i].age > aux1){
+			aux1 = c[i].age;
+			aux2 = i;			
+		}
+
+		if (c[i].alt > aux3){
+			aux3 = c[i].alt;
+			aux4 = i;			
+		}
+
+		i = i + 1;
+	}	
+
+	printf("Mais alto: %s\n", c[aux4].nome);
+	printf("Mais velho: %s\n", c[aux2].nome);
+}
